@@ -27,7 +27,8 @@ Table of Contents
 =================
 
   I. Adding the meta-helloworld layer to your build
- II. Misc
+ II. Compile Source Code
+III. Install Binary file
 
 
 I. Adding the meta-helloworld layer to your build
@@ -35,7 +36,14 @@ I. Adding the meta-helloworld layer to your build
 
 Run 'bitbake-layers add-layer meta-helloworld'
 
-II. Misc
+II. Compile Source Code
 ========
 
---- replace with specific information about the meta-helloworld layer ---
+Run 'bitbake helloworld' to build example code
+Run 'bitbake -c clean helloworld' to clean example code
+
+III. Install Binary file
+========
+
+Add IMAGE_INSTALL_append += " helloworld" in /{poky root dir}/build/conf/local.conf
+IMAGE_INSTALL detail description, please check https://www.yoctoproject.org/docs/3.1/ref-manual/ref-manual.html#var-IMAGE_INSTALL
